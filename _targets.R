@@ -12,40 +12,40 @@ end_date = "2015-05-01"
 
 p1_targets_list <- list(
   tar_target(
-    site_data_01427207,
-    download_nwis_site_data("01427207",
+    site_data_01427207_csv,
+    download_nwis_site_data("1_fetch/out/nwis_01427207_data.csv",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date),
     format = "file"
   ),
   tar_target(
-    site_data_01432160,
-    download_nwis_site_data("01432160",
+    site_data_01432160_csv,
+    download_nwis_site_data("1_fetch/out/nwis_01432160_data.csv",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date),
     format = "file"
   ),
   tar_target(
-    site_data_01435000,
-    download_nwis_site_data("01435000",
+    site_data_01435000_csv,
+    download_nwis_site_data("1_fetch/out/nwis_01435000_data.csv",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date),
     format = "file"
   ),
   tar_target(
-    site_data_01436690,
-    download_nwis_site_data("01436690",
+    site_data_01436690_csv,
+    download_nwis_site_data("1_fetch/out/nwis_01436690_data.csv",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date),
     format = "file"
   ),
   tar_target(
-    site_data_01466500,
-    download_nwis_site_data("01466500",
+    site_data_01466500_csv,
+    download_nwis_site_data("1_fetch/out/nwis_01466500_data.csv",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date),
@@ -53,11 +53,11 @@ p1_targets_list <- list(
   ),
   tar_target(
     merged_site_data,
-    merge_nwis_site_data(c(site_data_01427207,
-                           site_data_01432160,
-                           site_data_01435000,
-                           site_data_01436690,
-                           site_data_01466500)),
+    merge_nwis_site_data(c(site_data_01427207_csv,
+                           site_data_01432160_csv,
+                           site_data_01435000_csv,
+                           site_data_01436690_csv,
+                           site_data_01466500_csv)),
   ),
   tar_target(
     site_info_csv,
