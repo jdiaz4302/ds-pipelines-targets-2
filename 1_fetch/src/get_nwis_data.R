@@ -1,5 +1,9 @@
 
-download_nwis_site_data <- function(site_num, parameterCd, startDate, endDate){
+download_nwis_site_data <- function(out_fpath, parameterCd, startDate, endDate){
+  
+  # the out_fpath is expected to be of format '1_fetch/out/nwis_<site_num>_data.csv'
+  site_num <- basename(out_fpath) %>% 
+    stringr::str_extract(pattern = "(?:[0-9]+)")
   
   out_fpath <- file.path('1_fetch/out', paste0('nwis_', site_num, '_data.csv'))
   
