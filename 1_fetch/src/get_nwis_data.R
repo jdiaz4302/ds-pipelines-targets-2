@@ -12,6 +12,7 @@ download_nwis_data <- function(site_nums = c("01427207", "01432160", "01435000",
     # read the downloaded data and append it to the existing data.frame
     these_data <- read_csv(download_file, col_types = 'ccTdcc')
     data_out <- bind_rows(data_out, these_data)
+    browser()
   }
   return(data_out)
 }
