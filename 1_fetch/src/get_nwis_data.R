@@ -22,10 +22,7 @@ download_nwis_site_data <- function(out_fpath, parameterCd, startDate, endDate){
 }
 
 merge_nwis_site_data <- function(in_data_ls) {
-  merged_data <- data.frame()
-  for (in_data in in_data_ls) {
-    merged_data <- bind_rows(merged_data, in_data)
-  }
+  merged_data <- bind_rows(in_data_ls)
   return(merged_data)
 }
 
