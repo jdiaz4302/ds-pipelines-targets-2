@@ -18,16 +18,11 @@ download_nwis_site_data <- function(out_fpath, parameterCd, startDate, endDate){
   }
   # -- end of do-not-edit block
   
-  write_csv(data_out, file = out_fpath)
-  return(out_fpath)
+  return(data_out)
 }
 
-merge_nwis_site_data <- function(in_files) {
-  merged_data <- data.frame()
-  for (in_file in in_files) {
-    current_data <- read_csv(in_file, col_types = 'ccTdcc')
-    merged_data <- bind_rows(merged_data, current_data)
-  }
+merge_nwis_site_data <- function(in_data_ls) {
+  merged_data <- bind_rows(in_data_ls)
   return(merged_data)
 }
 
