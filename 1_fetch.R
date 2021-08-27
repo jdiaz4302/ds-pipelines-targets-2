@@ -8,35 +8,35 @@ end_date = "2015-05-01"
 p1_targets_list <- list(
   tar_target(
     p1_site_data_01427207,
-    download_nwis_site_data("1_fetch/out/nwis_01427207_data.csv",
+    download_nwis_site_data("01427207",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date)
   ),
   tar_target(
     p1_site_data_01432160,
-    download_nwis_site_data("1_fetch/out/nwis_01432160_data.csv",
+    download_nwis_site_data("01432160",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date)
   ),
   tar_target(
     p1_site_data_01435000,
-    download_nwis_site_data("1_fetch/out/nwis_01435000_data.csv",
+    download_nwis_site_data("01435000",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date)
   ),
   tar_target(
     p1_site_data_01436690,
-    download_nwis_site_data("1_fetch/out/nwis_01436690_data.csv",
+    download_nwis_site_data("01436690",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date)
   ),
   tar_target(
     p1_site_data_01466500,
-    download_nwis_site_data("1_fetch/out/nwis_01466500_data.csv",
+    download_nwis_site_data("01466500",
                             parameterCd = parameter_cd,
                             startDate = start_date,
                             endDate = end_date)
