@@ -1,0 +1,11 @@
+
+source("3_visualize/src/plot_timeseries.R")
+
+p3_targets_list <- list(
+  tar_target(
+    p3_figure_1_png,
+    plot_nwis_timeseries(out_fpath = "3_visualize/out/figure_1.png",
+                         in_fpath = p2_processed_data_rds),
+    format = "file"
+  )
+)
